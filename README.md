@@ -1,8 +1,8 @@
-# @Jno21/semantic-release-github-commit
+# @jno21/semantic-release-github-commit
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to commit release assets to GitHub using the REST API.
 
-[![npm](https://img.shields.io/npm/v/@Jno21/semantic-release-github-commit.svg)](https://www.npmjs.com/package/@Jno21/semantic-release-github-commit)
+[![npm](https://img.shields.io/npm/v/@jno21/semantic-release-github-commit.svg)](https://www.npmjs.com/package/@jno21/semantic-release-github-commit)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 | Step               | Description                                                                 |
@@ -36,7 +36,7 @@ This plugin uses the **GitHub REST API** to create commits, which enables automa
 ## Install
 
 ```bash
-npm install --save-dev @Jno21/semantic-release-github-commit
+npm install --save-dev @jno21/semantic-release-github-commit
 ```
 
 > **New to this plugin?** See the [Complete Setup Guide](./docs/setup-guide.md) for step-by-step instructions on setting up a GitHub App and configuring your workflow from scratch.
@@ -54,7 +54,7 @@ The plugin requires a GitHub authentication token with `contents: write` permiss
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm",
     [
-      "@Jno21/semantic-release-github-commit",
+      "@jno21/semantic-release-github-commit",
       {
         "files": ["dist/**", "CHANGELOG.md", "package.json"]
       }
@@ -196,7 +196,7 @@ If you provide custom identity via `authorName`/`authorEmail`/`committerName`/`c
 ```js
 {
   "plugins": [
-    ["@Jno21/semantic-release-github-commit", {
+    ["@jno21/semantic-release-github-commit", {
       "files": ["dist/**", "CHANGELOG.md"]
     }]
   ]
@@ -208,7 +208,7 @@ If you provide custom identity via `authorName`/`authorEmail`/`committerName`/`c
 ```js
 {
   "plugins": [
-    ["@Jno21/semantic-release-github-commit", {
+    ["@jno21/semantic-release-github-commit", {
       "files": ["dist/**", "package.json"],
       "commitMessage": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }]
@@ -221,7 +221,7 @@ If you provide custom identity via `authorName`/`authorEmail`/`committerName`/`c
 ```js
 {
   "plugins": [
-    ["@Jno21/semantic-release-github-commit", {
+    ["@jno21/semantic-release-github-commit", {
       "files": [
         "dist/**/*.js",
         "dist/**/*.css",
