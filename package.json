@@ -1,0 +1,49 @@
+{
+  "name": "@jno21/semantic-release-github-commit",
+  "version": "1.0.0-beta.1",
+  "description": "Semantic-release plugin to commit files to GitHub using the REST API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Jonathan Forget",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "homepage": "https://github.com/Jno21/semantic-release-github-commit#readme",
+  "keywords": [
+    "semantic-release",
+    "plugin",
+    "github",
+    "commit",
+    "git"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=20.0.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.0",
+    "execa": "^9.6.0",
+    "globby": "^15.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/npm": "^13.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.19.22",
+    "jest": "^29.7.0",
+    "semantic-release": "^25.0.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  }
+}
