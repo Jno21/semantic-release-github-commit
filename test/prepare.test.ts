@@ -261,7 +261,8 @@ describe("prepare", () => {
     const pluginConfig: PluginConfig = {
       files: ["dist/**"],
       commitMessage:
-        "release: ${nextRelease.version} tag: ${nextRelease.gitTag}",
+        `release: \${nextRelease.version} tag: \${nextRelease.gitTag}
+head: \${nextRelease.gitHead} notes: \${nextRelease.notes}`,
     };
     const context = createMockContext({
       nextRelease: {
@@ -285,7 +286,8 @@ describe("prepare", () => {
 
     expect(mockGitHubClient.createCommit).toHaveBeenCalledWith(
       expect.any(Object),
-      "release: 1.2.3 tag: v1.2.3",
+      `release: 1.2.3 tag: v1.2.3
+head: abc123 notes: Release notes`,
       expect.any(String),
       expect.any(Array),
       undefined,
