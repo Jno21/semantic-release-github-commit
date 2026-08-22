@@ -35,7 +35,7 @@
   "dependencies": {
     "@octokit/rest": "^22.0.0",
     "execa": "^9.6.0",
-    "globby": "^15.0.0"
+    "globby": "^16.0.0"
   },
   "devDependencies": {
     "@semantic-release/npm": "^13.0.0",
