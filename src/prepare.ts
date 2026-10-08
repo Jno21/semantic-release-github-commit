@@ -101,7 +101,8 @@ export async function prepare(
     commitMessage = commitMessage
       .replace(/\$\{nextRelease\.version\}/g, nextRelease.version)
       .replace(/\$\{nextRelease\.gitTag\}/g, nextRelease.gitTag)
-      .replace(/\$\{nextRelease\.gitHead\}/g, nextRelease.gitHead);
+      .replace(/\$\{nextRelease\.gitHead\}/g, nextRelease.gitHead)
+      .replace(/\$\{nextRelease\.notes\}/g, nextRelease.notes);
   } else if (!nextRelease) {
     // Fallback if no nextRelease context
     commitMessage = commitMessage || "chore(release): update [skip ci]";
