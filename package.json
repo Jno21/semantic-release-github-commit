@@ -12,7 +12,8 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "homepage": "https://github.com/Jno21/semantic-release-github-commit#readme",
   "keywords": [

@@ -33,11 +33,14 @@ export function parseRepositoryUrl(url: string): {
   // - https://github.com/owner/repo
   // - owner/repo
 
-  let match = url.match(/github\.com[:/]([^/]+)\/([^/.]+)/);
+  // First, remove `.git` if it exists
+  let sanitizedUrl = url.replace(/\.git$/, "");
+  
+  let match = sanitizedUrl.match(/github\.com[:/]([^/]+)\/([^/?#]+)/);
 
   if (!match) {
     // Try simple owner/repo format
-    match = url.match(/^([^/]+)\/([^/]+)$/);
+    match = sanitizedUrl.match(/^([^/]+)\/([^/]+)$/);
   }
 
   if (!match) {
@@ -45,7 +48,7 @@ export function parseRepositoryUrl(url: string): {
   }
 
   const owner = match[1];
-  const repo = match[2].replace(/\.git$/, "");
+  const repo = match[2];
 
   return { owner, repo };
 }
